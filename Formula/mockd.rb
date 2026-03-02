@@ -11,7 +11,7 @@ class Mockd < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/getmockd/mockd/releases/download/v0.4.8-rc.1/mockd_0.4.8-rc.1_darwin_amd64.tar.gz"
-      sha256 "5adfbde2629b315ce4cc708a3933ca0a3e28e91bb57c775ab42723889ae8cd1a"
+      sha256 "873e6f36bc71d9d6b4de945c57d18b742e14eda31f31dab224599351ed54224a"
 
       define_method(:install) do
         bin.install "mockd"
@@ -22,7 +22,7 @@ class Mockd < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/getmockd/mockd/releases/download/v0.4.8-rc.1/mockd_0.4.8-rc.1_darwin_arm64.tar.gz"
-      sha256 "84f6f30371f16ffebd1e11a687275728ae9c3f53f2f2dac0de34c091b0cf207d"
+      sha256 "6fd04215d4aa457ff898d60ad1fd4dd3d31c898a79edb8bd2970fe6a3fac0982"
 
       define_method(:install) do
         bin.install "mockd"
@@ -36,7 +36,7 @@ class Mockd < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/getmockd/mockd/releases/download/v0.4.8-rc.1/mockd_0.4.8-rc.1_linux_amd64.tar.gz"
-      sha256 "d0a6e064fbe60607b9252254545869e02eeb1a3b5f77a9dff1b287f528db8e78"
+      sha256 "8f66d0bb6d47891a1a56e9d8849756c5804e9a95f0cb4c6d2789d69b757799de"
       define_method(:install) do
         bin.install "mockd"
         bash_completion.install "completions/mockd.bash" => "mockd"
@@ -46,7 +46,7 @@ class Mockd < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/getmockd/mockd/releases/download/v0.4.8-rc.1/mockd_0.4.8-rc.1_linux_arm64.tar.gz"
-      sha256 "6034285a3e886db39cd25295e1515815e5e82167aa2245ad3f55c2cbe4818158"
+      sha256 "50414b4f4ae71af651025c7adbab55d27c45ed3e645bfccd8cd719f45010444e"
       define_method(:install) do
         bin.install "mockd"
         bash_completion.install "completions/mockd.bash" => "mockd"
