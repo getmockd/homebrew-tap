@@ -5,13 +5,13 @@
 class Mockd < Formula
   desc "High-performance multi-protocol API mocking server"
   homepage "https://mockd.io"
-  version "0.5.1"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/getmockd/mockd/releases/download/v0.5.1/mockd_0.5.1_darwin_amd64.tar.gz"
-      sha256 "a62ea7681737bb00bd50568e5189db1b632b77dcef3feb41840695bea50e75ee"
+      url "https://github.com/getmockd/mockd/releases/download/v0.6.0/mockd_0.6.0_darwin_amd64.tar.gz"
+      sha256 "5774c01dc1afff32a52137e4ec3dfc2bab95dd99195549ea870cafcc11e4cc78"
 
       define_method(:install) do
         bin.install "mockd"
@@ -21,8 +21,8 @@ class Mockd < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/getmockd/mockd/releases/download/v0.5.1/mockd_0.5.1_darwin_arm64.tar.gz"
-      sha256 "17172136e44d665896de976daf41206eda17e52620d2fe13105db322770be2c8"
+      url "https://github.com/getmockd/mockd/releases/download/v0.6.0/mockd_0.6.0_darwin_arm64.tar.gz"
+      sha256 "020ac867a411b08ff0b37fc599eb16ae83abe144cb3ae339a1b45ddafa5ef6a4"
 
       define_method(:install) do
         bin.install "mockd"
@@ -35,8 +35,8 @@ class Mockd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getmockd/mockd/releases/download/v0.5.1/mockd_0.5.1_linux_amd64.tar.gz"
-      sha256 "323a77832615c0c93d0337463953c438dfa601b5cc8c53e84f287d6fbbc5337e"
+      url "https://github.com/getmockd/mockd/releases/download/v0.6.0/mockd_0.6.0_linux_amd64.tar.gz"
+      sha256 "5da184cda0a6bdab2bcffc0a7ff643514cb72d2172666d651f125b1195d5bb2e"
       define_method(:install) do
         bin.install "mockd"
         bash_completion.install "completions/mockd.bash" => "mockd"
@@ -45,8 +45,8 @@ class Mockd < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getmockd/mockd/releases/download/v0.5.1/mockd_0.5.1_linux_arm64.tar.gz"
-      sha256 "e652e5c5f8ba3572da788c0aa4ab33e2cd8f1634c5b8eff60b31df406d093755"
+      url "https://github.com/getmockd/mockd/releases/download/v0.6.0/mockd_0.6.0_linux_arm64.tar.gz"
+      sha256 "1cd182a134b79359ef8fd1a8d94286637b8eda8a807f5c437994efb0115cca14"
       define_method(:install) do
         bin.install "mockd"
         bash_completion.install "completions/mockd.bash" => "mockd"
